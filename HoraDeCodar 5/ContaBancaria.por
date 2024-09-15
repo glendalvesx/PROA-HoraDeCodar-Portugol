@@ -12,16 +12,16 @@ programa {
 
     escreva("\n")
 
-    escreva("Olá ", nome, ", é um prazer ter você por aqui!")
+    escreva("OlÃ¡ ", nome, ", Ã© um prazer ter vocÃª por aqui!")
 
     escreva("\n")
    
-    escreva("Escolha uma opção:\n")
+    escreva("Escolha uma opÃ§Ã£o:\n")
     escreva("1. Ver saldo\n")
     escreva("2. Ver extrato\n")
     escreva("3. Fazer saque\n")
-    escreva("4. Fazer depósito\n")
-    escreva("5. Fazer transfência\n")
+    escreva("4. Fazer depÃ³sito\n")
+    escreva("5. Fazer transferÃªncia\n")
     escreva("6. Sair\n")
 
     leia(opcao)
@@ -51,10 +51,10 @@ programa {
       leia(senha)
 
       se(senha == 3589){
-        escreva("Seu saldo atual é: ", saldo, "\n")
+        escreva("Seu saldo atual Ã©: ", saldo, "\n")
         inicio()
       }senao{
-        escreva("Senha inválida. \n")
+        escreva("Senha invÃ¡lida. \n")
         verSaldo()
       }
     }
@@ -69,12 +69,12 @@ programa {
         escreva("EXTRATO: \n")
         escreva("Uber         | R$50,00 \n")
         escreva("Pag Boleto   | R$180,00 \n")
-        escreva("Compra Gás   | R$90,00 \n")
+        escreva("Compra GÃ¡s   | R$90,00 \n")
         escreva("Hipermercado | R$200,00 \n")
-        escreva("Depósito     | R$520,00 \n")
+        escreva("DepÃ³sito     | R$520,00 \n")
         inicio()
       }senao{
-        escreva("Senha inválida!")
+        escreva("Senha invÃ¡lida!")
         escreva("\n")
         verExtrato()
       }
@@ -93,10 +93,10 @@ programa {
         leia(saque)
 
         se(saque <= 0){
-          escreva("Por favor, informe um número válido. \n")
+          escreva("Por favor, informe um nÃºmero vÃ¡lido. \n")
           fazerSaque()
         }senao se (saque > saldo){
-          escreva("Operação não autorizada. Saldo insuficiente. \n")
+          escreva("OperaÃ§Ã£o nÃ£o autorizada. Saldo insuficiente. \n")
           verSaldo()
         }senao{
           saldo = saldo - saque
@@ -104,7 +104,7 @@ programa {
           inicio()
         }
       }senao{
-        escreva("Senha inválida!")
+        escreva("Senha invÃ¡lida!")
         escreva("\n")
         fazerSaque()
       }
@@ -115,25 +115,25 @@ programa {
       inteiro senha = 3589
       real valorDeposito
 
-      escreva("Para realizar o depósito, por favor digite sua senha: ")
+      escreva("Para realizar o depÃ³sito, por favor digite sua senha: ")
       leia(senha)
 
       se (senha == 3589){
-        escreva("Digite o valor do depósito: ")
+        escreva("Digite o valor do depÃ³sito: ")
         leia(valorDeposito)
       }senao{
-        escreva("Senha inválida.")
+        escreva("Senha invÃ¡lida.")
         escreva("\n")
         fazerDeposito()
       }
       
       se (valorDeposito <= 0){
-        escreva("Operação não autorizada. Por favor, informe um valor maior que zero.")
+        escreva("OperaÃ§Ã£o nÃ£o autorizada. Por favor, informe um valor maior que zero.")
         escreva("\n")
         fazerDeposito()
       }senao {
         saldo = saldo + valorDeposito
-        escreva("Depósito realizado com sucesso!")
+        escreva("DepÃ³sito realizado com sucesso!")
         escreva("\n")
         verSaldo()
         inicio()
@@ -147,49 +147,49 @@ programa {
       inteiro numeroConta = 0000
       real valorTransferencia
 
-      escreva("Para realizar a transferência, por favor digite sua senha: ")
+      escreva("Para realizar a transferÃªncia, por favor digite sua senha: ")
       leia(senha)
 
       se(senha == 3589){
-        escreva("Informe o número da conta para a transferêcia: ")
+        escreva("Informe o nÃºmero da conta para a transferÃªcia: ")
         leia(numeroConta)
       }senao{
-        escreva("Senha inválida!")
+        escreva("Senha invÃ¡lida!")
         escreva("\n")
         fazerTransferencia()
       }
 
       se(numeroConta <= 0000){
-        escreva("Operação não autorizada. Número da conta inválido. \n")
+        escreva("OperaÃ§Ã£o nÃ£o autorizada. NÃºmero da conta invÃ¡lido. \n")
         fazerTransferencia()
       }
 
-      escreva("Digite o valor da transferência: ")
+      escreva("Digite o valor da transferÃªncia: ")
       leia(valorTransferencia)
       
       se(valorTransferencia <= 0){
-        escreva("Operação não autorizada. O valor dever maior que zero. \n")
+        escreva("OperaÃ§Ã£o nÃ£o autorizada. O valor dever maior que zero. \n")
         fazerTransferencia()
       }senao se(valorTransferencia > saldo){
-        escreva("Operação não autorizada. Saldo insuficiente.")
+        escreva("OperaÃ§Ã£o nÃ£o autorizada. Saldo insuficiente.")
         escreva("\n")
         inicio()
       }senao{
         saldo = saldo - valorTransferencia
-        escreva("Transferência realizada com sucesso! \n")
+        escreva("TransferÃªncia realizada com sucesso! \n")
         inicio()
       }
 
     }
 
     funcao erro(){
-        escreva("Erro! Opção inválida.")
+        escreva("Erro! OpÃ§Ã£o invÃ¡lida.")
         escreva("\n")
         inicio()
     }
 
     funcao sair(){
-      escreva("Foi um prazer ter você por aqui, ",nome, "!" , " Obrigado(a) por utlizar nosso banco!")
+      escreva("Foi um prazer ter vocÃª por aqui, ",nome, "!" , " Obrigado(a) por utlizar nosso banco!")
     }
 
   }
